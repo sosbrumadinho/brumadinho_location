@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Layers Control Tutorial - Leaflet</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="docs/images/favicon.ico"/>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+          integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+            integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+            crossorigin=""></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src='http://bbecquet.github.io/Leaflet.PolylineDecorator/dist/leaflet.polylineDecorator.js'></script>
+
+
+
+    <style>
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container-fluid {
+            height: 100vh;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="container-fluid d-flex flex-column">
+    <div class="row flex-grow-0">
+        
+
+        	<div class="col-md-4">
+	            	<h6>Latitude<input id="lat"
+	                placeholder="Latitude" value="-20.135896"
+	                type="search" name="search" class="form-control form-control-md" />
+	                </h6>
+            </div>
+           	<div class="col-md-4">
+           			<h6>Longitude
+		            <input id="long"
+	                placeholder="Longitude" value="-44.123509"
+	                type="search" name="search" class="form-control form-control-md" />
+					</h6>
+			</div>
+        	<div class="col-md-4"> 	    
+        		<br/>   
+            	<button onclick="buscar();">OK</button>
+            </div>
+            <br/>
+
+    <script type="text/javascript">
+    	function buscar(){
+    		alert("resultado calculado.");
+    		 var lat = document.getElementById("lat").value;
+    		 var long = document.getElementById("long").value;
+    		 var url = "/apiresp.json";
+
+			var pointA = new L.LatLng(lat, long);
+		    L.marker([lat, long]).bindPopup('Localização inicial').addTo(cities);
+
+    		 fetch(url).then(function(result){
+    		 	result.json().then(function(data){
+ 					
+ 					var pointB = new L.LatLng(data.lat, data.long);
+				    L.marker([data.lat, data.long]).bindPopup('Localização final (estimada)'+"<br/>Latitude:"+data.lat+"<br/>Longitude:"+data.long).addTo(cities);
+
+					var pointList = [pointA, pointB];
+
+					var firstpolyline = new L.Polyline(pointList, {
+					    color: 'red',
+					    weight: 3,
+					    opacity: 0.5,
+					    smoothFactor: 1
+					});
+					firstpolyline.addTo(map);
+
+					var arrow = firstpolyline;
+					var arrowHead = L.polylineDecorator(arrow, {
+					    patterns: [
+					        {
+					            offset: '100%',
+					            repeat: 0,
+					            symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true}})
+					        }
+					    ]
+					}).addTo(map);
+
+
+
+    		 	});
+    		 })
+
+
+	
+    	}
+    </script>
+
+    </div>
+    <div class="row flex-grow-1">
+        <div class="col-12">
+            <div id='map'></div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var cities = L.layerGroup();
+
+    L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.').addTo(cities),
+        L.marker([39.74, -104.99]).bindPopup('This is Denver, CO.').addTo(cities),
+        L.marker([39.73, -104.8]).bindPopup('This is Aurora, CO.').addTo(cities),
+        L.marker([39.77, -105.23]).bindPopup('This is Golden, CO.').addTo(cities);
+
+
+    var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+    var grayscale = L.tileLayer(mbUrl, {
+            id: 'mapbox.light',
+            attribution: mbAttr
+        }),
+        streets = L.tileLayer(mbUrl, {
+            id: 'mapbox.streets',
+            attribution: mbAttr
+        });
+
+    var map = L.map('map', {
+        center: [-20.1234862,-44.1306461],
+        zoom: 120,
+        layers: [grayscale, cities]
+    });
+
+    var runLayer = omnivore.kml('area_quente.kml')
+        .on('ready', function() {
+            map.fitBounds(runLayer.getBounds());
+            runLayer.addTo(cities);
+        });
+
+    var baseLayers = {
+        "Grayscale": grayscale,
+        "Streets": streets,
+    };
+
+    var overlays = {
+        "Cities": cities
+    };
+
+    L.control.layers(baseLayers, overlays).addTo(map);
+</script>
+
+
+</body>
+</html>
