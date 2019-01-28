@@ -1,4 +1,4 @@
-# brumadinho_location
+# Brumadinho Location
 
 [English]
 This is the first version of a tool to estimate the possible location of a missed person at Brumadinho/MG. At this city, a huge Dam Burst occured recently and many people died and many more are missing.
