@@ -7,6 +7,9 @@ from utils import return_vector
 
 class Handler(BaseHTTPRequestHandler):
 
+    def do_GET(self):
+        self.send_response_only(200)
+
     def do_POST(self):
         self.send_response(200)
         self.send_header('Content-type', 'application/json')
