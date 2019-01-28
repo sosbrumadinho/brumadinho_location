@@ -3,6 +3,10 @@
 ## English
 This is the first version of a tool to estimate the possible location of a missed person at Brumadinho/MG. At this city, a huge Dam Burst occured recently and many people died and many more are missing.
 
+> The **Brumadinho dam disaster** occurred on 25 January 2019, when a tailings dam at an iron ore mine in Brumadinho, Minas Gerais, Brazil suffered a catastrophic failure.
+>
+> — https://en.wikipedia.org/wiki/Brumadinho_dam_disaster
+
 This tool requires the latitude and longitude coordinates to calculate the estimative based on the tailing flows.<br/>
 
 The algorithm still needs to be improved (so much!). Also, we built it with few data that we had got. To improve it, we need tailings physical-chemical data, topographic map (.csv) of the place, simulations of the reject spreading, and, of course, the latitude and longitude coordinates from the victims' cell phone. <br/>
