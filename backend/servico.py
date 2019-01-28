@@ -31,7 +31,7 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(json.dumps(response).encode())
 
 
-def run(host='127.0.0.1', port=8080):
+def run(host='127.0.0.1', port=8000):
     server_address = (host, port)
     httpd = HTTPServer(server_address, Handler)
     # run_server
