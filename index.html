@@ -122,7 +122,14 @@
         const srcLng = document.getElementById("lng").value;
         const srcPoint = new L.LatLng(srcLat, srcLng);
 
-        const result = await fetch('/apiresp.json');
+        const params = new URLSearchParams();
+        params.append('lat', srcLat);
+        params.append('lng', srcLng);
+
+        const result = await fetch('/calculate', {
+            method: 'POST',
+            body: params
+        });
         const data = await result.json();
         const destPoint = new L.LatLng(data.lat, data.lng);
         drawVector(srcPoint, destPoint);
