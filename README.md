@@ -7,6 +7,7 @@ Pedimos aos Devs que façam seus Pull Requests para que possamos deixar este alg
 Ideias a serem implementadas: <br/>
   http://fluidityproject.github.io/ <br/>
   http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/ <br/>
-  https://pt.wikipedia.org/wiki/Equa%C3%A7%C3%B5es_de_Navier-Stokes <br/><br/>
+  https://pt.wikipedia.org/wiki/Equa%C3%A7%C3%B5es_de_Navier-Stokes <br/>
+  http://rlguy.com/gridfluidsim/<br/><br/>
 Vamos todos fazer a nossa parte! Isto pode ser útil no futuro também.<br/>
 Obrigado.
