@@ -1,6 +1,7 @@
 import json
-from http.server import BaseHTTPRequestHandler, HTTPServer
 from configparser import ConfigParser
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
 from utils import return_vector
 
 
@@ -11,12 +12,9 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'application/json')
         self.end_headers()
 
-        # self.data_string = self.rfile.read(int(self.headers['Content-Length']))
-
         json_data = self.rfile.read(int(self.headers['Content-Length']))
 
         geo_point = json.loads(json_data)
-        # lat, lng = -20.135896, -44.123509
         lat, lng = geo_point['lat'], geo_point['lng']
         position = return_vector(lat, lng)
 
@@ -26,7 +24,6 @@ class Handler(BaseHTTPRequestHandler):
         }
 
         self.wfile.write(json.dumps(response).encode())
-
 
 
 def run(host='127.0.0.1', port=8080):
