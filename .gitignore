@@ -10,3 +10,5 @@ build/
 dist/
 tests/report/
 .idea
+*.ini
+*venv*
