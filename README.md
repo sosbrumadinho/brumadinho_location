@@ -4,8 +4,9 @@ O algoritmo precisa ser melhorado (e muito) ainda. Além disso, fizemos apenas c
 O link do código-fonte é: https://github.com/dieegom/brumadinho_location <br/>
 Vamos deixar o sistema atualizado rodando em: http://18.218.138.85  <br/>
 Pedimos aos Devs que façam seus Pull Requests para que possamos deixar este algoritmo mais robusto e disponível para os responsáveis pelo resgate. "Forkem" à vontade. Continuaremos melhorando o código ao longo da semana. <br/><br/>
-Ideias futuras: <br/>
+Ideias a serem implementadas: <br/>
   http://fluidityproject.github.io/ <br/>
-  http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/ <br/><br/>
+  http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/ <br/>
+  https://pt.wikipedia.org/wiki/Equa%C3%A7%C3%B5es_de_Navier-Stokes <br/><br/>
 Vamos todos fazer a nossa parte! Isto pode ser útil no futuro também.<br/>
 Obrigado.
