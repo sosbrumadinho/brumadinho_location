@@ -1,6 +1,6 @@
 # Brumadinho Location
 
-[English]
+## English
 This is the first version of a tool to estimate the possible location of a missed person at Brumadinho/MG. At this city, a huge Dam Burst occured recently and many people died and many more are missing.
 
 This tool requires the latitude and longitude coordinates to calculate the estimative based on the tailing flows.<br/>
@@ -21,7 +21,7 @@ We ask the Devs to make their Pull Requests so we can make this algorithm more r
 Join us in this project ! This may be useful in the future as well. <br/>
 Thank you.
 
-[Português]
+## Português
 Criamos uma primeira versão de uma ferramenta para colocar latitude e longitude dos desaparecidos e, com base no fluxo de rejeitos, estimar a possível localização da pessoa. <br/>
 O algoritmo precisa ser melhorado (e muito) ainda. Além disso, fizemos apenas com os poucos dados que obtivemos. Ideal seria termos dados físico-químicos do rejeito, mapa topográfico (em .csv) do local, simulações do rejeito se espalhando e, claro, latitude e longitude dos celulares.<br/>
 O link do código-fonte é: https://github.com/dieegom/brumadinho_location <br/>
