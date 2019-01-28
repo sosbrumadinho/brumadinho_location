@@ -40,5 +40,6 @@ def height(x, y):
 
 
 def return_vector(request_latitude, request_longitude):
-    p = Position(request_latitude, request_longitude)
-    return p.calc_vector()
+    if request_latitude and request_longitude:
+        return Position(request_latitude, request_longitude).calc_vector()
+    return None

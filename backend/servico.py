@@ -15,13 +15,15 @@ class Handler(BaseHTTPRequestHandler):
         json_data = self.rfile.read(int(self.headers['Content-Length']))
 
         geo_point = json.loads(json_data)
-        lat, lng = geo_point['lat'], geo_point['lng']
+        lat, lng = geo_point.get('lat',None), geo_point.get('lng', None)
         position = return_vector(lat, lng)
-
-        response = {
-            'lat': position[0],
-            'lng': position[1],
-        }
+        if position:
+            response = {
+                'lat': position[0],
+                'lng': position[1],
+            }
+        else:
+            response = {}
 
         self.wfile.write(json.dumps(response).encode())
 
