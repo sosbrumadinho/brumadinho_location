@@ -1,9 +1,10 @@
 from django.urls import path, include
 
-from api.views import calculatecoordinate
+from apps.api.views import calculatecoordinate, crawler
 
 app_name = 'api'
 
 urlpatterns = [
-    path('calculate', calculatecoordinate, name='coordinate_calculate')
+    path('calculate', calculatecoordinate, name='coordinate_calculate'),
+    path('crawler/', crawler),
 ]
