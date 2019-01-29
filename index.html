@@ -8,51 +8,48 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Add bootstrap library by rel="stylesheet" -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+        <link rel="stylesheet" href="styles/style.css" />
+
         <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
         <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
-        <link rel="stylesheet" href="css/bootstrap.css" />
         <script src='http://bbecquet.github.io/Leaflet.PolylineDecorator/dist/leaflet.polylineDecorator.js'></script>
 
-        <style>
-            #map {
-                width: 100%;
-                height: 100%;
-            }
+        <!-- Bootstrap js files-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-            .container-fluid {
-                height: 100vh;
-            }
-
-            .repo {
-                position: absolute;
-                left: 10px;
-                bottom: 10px;
-                background: rgba(255, 255, 255, 0.9);
-                border: 1px solid #CCC;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-                z-index: 1000;
-                padding: 4px 8px;
-            }
-        </style>
+        <!-- Include scripts for better code reading -->
+        <script src="scriptFiles/script.js"></script>
     </head>
+
 <body>
 <div class="container-fluid d-flex flex-column">
     <div class="row flex-grow-0">
-
         <div class="col-12 py-2">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Latitude"
-                       id="lat" value="-20.135896">
-                <input type="text" class="form-control" placeholder="Longitude"
-                       id="lng" value="-44.123509">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="Latitude"
+                            id="lat" 
+                            value="-20.135896">
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            placeholder="Longitude"
+                            id="lng" 
+                            value="-44.123509">
                 <div class="input-group-append" id="button-addon4">
-                    <button class="btn btn-primary" type="button"
-                            onclick="calculate()">Calculate
+                            <button 
+                                class="btn btn-primary" 
+                                type="button"
+                                onclick="calculate()">
+                                Calcular
                     </button>
                 </div>
             </div>
@@ -63,114 +60,19 @@
             <div id='map'></div>
         </div>
     </div>
-
 </div>
 <div class="repo small d-flex align-content-center">
-    <svg height="20" class="octicon octicon-mark-github" viewBox="0 0 16 16"
-         version="1.1" width="20" aria-hidden="true">
+            <svg 
+                height="20" 
+                class="octicon octicon-mark-github" 
+                viewBox="0 0 16 16"
+                version="1.1" 
+                width="20" 
+                aria-hidden="true">
         <path fill-rule="evenodd"
               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
     </svg>
     <a href="https://github.com/dieegom/brumadinho_location" class="ml-2">https://github.com/dieegom/brumadinho_location</a></h6>
 </div>
-
-
-<script>
-
-    function createMarker(name, point) {
-        return L.marker(point).bindPopup(
-            "<b>" + name + "</b>" +
-            "<br/>Latitude:" + point.lat +
-            "<br/>Longitude:" + point.lng
-        ).addTo(map);
-    }
-
-    function drawVector(pointA, pointB) {
-        createMarker('Initial Location', pointA);
-        createMarker('Estimated Final Location', pointB);
-
-        const line = new L.Polyline([pointA, pointB], {
-            color: 'red',
-            weight: 3,
-            opacity: 0.5,
-            smoothFactor: 1
-        }).addTo(map);
-
-        L.polylineDecorator(line, {
-            patterns: [
-                {
-                    offset: '100%',
-                    repeat: 0,
-                    symbol: L.Symbol.arrowHead({
-                        pixelSize: 15,
-                        polygon: false,
-                        pathOptions: {
-                            stroke: true,
-                            color: 'red',
-                            weight: 3,
-                            opacity: 0.5,
-                            smoothFactor: 1
-                        }
-                    })
-                }
-            ]
-        }).addTo(map);
-    }
-
-    async function calculate() {
-        const srcLat = document.getElementById("lat").value;
-        const srcLng = document.getElementById("lng").value;
-        const srcPoint = new L.LatLng(srcLat, srcLng);
-        const jeisao = {"lat": srcLat, "lng": srcLng};
-        const params = new URLSearchParams();
-        params.append('lat', srcLat);
-        params.append('lng', srcLng);
-
-        const result = await fetch('/calculate', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(jeisao)
-        });
-        const data = await result.json();
-        const destPoint = new L.LatLng(data.lat, data.lng);
-        drawVector(srcPoint, destPoint);
-    }
-
-    function initMap() {
-        const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY2F1ZXRoZW5vcmlvIiwiYSI6ImNqcmZlOTVzbDI4MXU0NHA4Y3NnM3Q2dTkifQ.dB1mAnvB0oqVvb-k_ZNbcQ';
-
-        const satelliteLayer = L.tileLayer(mbUrl, {
-            id: 'mapbox.satellite',
-            attribution: mbAttr
-        });
-
-        const map = L.map('map', {
-            layers: [satelliteLayer]
-        });
-
-        const areaQuenteLayer = omnivore.kml('area_quente.kml').on(
-            'ready', function () {
-                map.fitBounds(areaQuenteLayer.getBounds());
-                areaQuenteLayer.addTo(map);
-            }
-        );
-
-        return map
-    }
-
-
-    document.addEventListener("DOMContentLoaded", function() {
-        window.map = initMap();
-    });
-
-
-
-</script>
 </body>
 </html>
