@@ -1,3 +1,14 @@
+new Vue({
+    el: '#app',
+    data: {
+        lat: '-20.135896',
+        lng: '-44.123509'
+    },
+    methods: {
+        calculate: calculate
+    }
+});
+
 // WARNING: doesn't sanitize inputs
 function createMarker(name, point) {
     return L.marker(point).bindPopup(
@@ -40,9 +51,7 @@ function drawVector(pointA, pointB) {
 }
 
 async function calculate() {
-    const srcLat = document.getElementById('lat').value;
-    const srcLng = document.getElementById('lng').value;
-    const srcPoint = new L.LatLng(srcLat, srcLng);
+    const srcPoint = new L.LatLng(this.lat, this.lng);
 
     const result = await fetch('/calculate', {
         method: 'POST',
