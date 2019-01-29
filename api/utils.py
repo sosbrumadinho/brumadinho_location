@@ -29,10 +29,9 @@ class Position:
     def calc_vector(self):
         v_pos_x, v_pos_y = (self.lat - dam[0], self.lng - dam[1])
         d = np.sqrt((v_pos_x ** 2 + v_pos_y ** 2))
-        print(v_pos_x, v_pos_y, d)
-        xf = self.lat + v_pos_x
-        yf = self.lng + v_pos_y
-        return xf, yf
+        xf = float('%.6f' % (self.lat + v_pos_x))
+        yf = float('%.6f' % (self.lng + v_pos_y))
+        return {'lat': xf, 'lng': yf}
 
 
 def height(x, y):

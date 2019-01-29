@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
 
     <head>
 
-        <title>Layers Control Tutorial - Leaflet</title>
+        <title>Brumadinho Simulação de Encontro de Vítimas</title>
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
         <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
         <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
-        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="{%  static  'css/bootstrap.css'%}" />
         <script src='http://bbecquet.github.io/Leaflet.PolylineDecorator/dist/leaflet.polylineDecorator.js'></script>
 
         <style>
@@ -52,7 +52,7 @@
                        id="lng" value="-44.123509">
                 <div class="input-group-append" id="button-addon4">
                     <button class="btn btn-primary" type="button"
-                            onclick="calculate()">Calculate
+                            onclick="calculate()">Calcular
                     </button>
                 </div>
             </div>
@@ -86,8 +86,8 @@
     }
 
     function drawVector(pointA, pointB) {
-        createMarker('Initial Location', pointA);
-        createMarker('Estimated Final Location', pointB);
+        createMarker('Localização inicial', pointA);
+        createMarker('Localização final (estimada)', pointB);
 
         const line = new L.Polyline([pointA, pointB], {
             color: 'red',
@@ -126,7 +126,7 @@
         params.append('lat', srcLat);
         params.append('lng', srcLng);
 
-        const result = await fetch('/calculate', {
+        const result = await fetch('/api/calculate', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -154,7 +154,7 @@
             layers: [satelliteLayer]
         });
 
-        const areaQuenteLayer = omnivore.kml('area_quente.kml').on(
+        const areaQuenteLayer = omnivore.kml('static/area_quente.kml').on(
             'ready', function () {
                 map.fitBounds(areaQuenteLayer.getBounds());
                 areaQuenteLayer.addTo(map);
