@@ -16,9 +16,27 @@
     <body>
         <div id="app">
             <div class="container-fluid d-flex flex-column">
-                <div class="row flex-grow-0">
+                <div class="d-flex flex-column flex-md-row align-items-center py-3 px-md-3">
+                    <h5 class="my-0 mr-md-auto font-weight-normal">Brumadinho Location</h5>
+                    <nav class="my-2 my-md-0 mr-md-3" v-cloak>
+                        <a v-for="(localeName, localeCode) of locales"
+                            :href="'#' + localeCode"
+                            :class="'p-2 text-' + (locale === localeCode ? 'primary' : 'dark')"
+                            @click.prevent="locale = localeCode"
+                        >{{ localeName }}</a>
+                    </nav>
+                    <a class="btn btn-outline-primary" href="https://github.com/dieegom/brumadinho_location">GitHub</a>
+                </div>
+                <div class="d-flex flex-column px-md-3">
+                    <p>We aim that this project will be a repository for tools to help rescue and location of missed people from <a href="https://en.wikipedia.org/wiki/Brumadinho_dam_disaster">the huge Dam Burst occurred recently in Brumadinho/MG</a>.</p>
+                    <p>This tool requires the latitude and longitude coordinates to calculate the estimative based on the tailing flows. For more info check <a href="https://github.com/dieegom/brumadinho_location/#--location">the GitHub page</a>.</p>
+                </div>
+                <div class="row flex-grow-0 px-md-3">
                     <div class="col-12 py-2">
                         <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Coordinates</span>
+                            </div>
                             <input
                                 type="text"
                                 class="form-control"
@@ -36,13 +54,13 @@
                                     class="btn btn-primary"
                                     type="button"
                                     @click="calculate">
-                                    Calcular
+                                    Calculate
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row flex-grow-1">
+                <div class="row flex-grow-1 px-md-3 pb-3">
                     <div class="col-12">
                         <div id='map'></div>
                     </div>

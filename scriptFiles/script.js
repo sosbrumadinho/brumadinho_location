@@ -1,6 +1,11 @@
-new Vue({
+var app = new Vue({
     el: '#app',
     data: {
+        locale: 'eng',
+        locales: {
+            eng: 'English',
+            por: 'Portuguese'
+        },
         lat: '-20.135896',
         lng: '-44.123509'
     },
@@ -51,7 +56,7 @@ function drawVector(pointA, pointB) {
 }
 
 async function calculate() {
-    const srcPoint = new L.LatLng(this.lat, this.lng);
+    const srcPoint = new L.LatLng(app.lat, app.lng);
 
     const result = await fetch('/calculate', {
         method: 'POST',
