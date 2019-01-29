@@ -86,7 +86,7 @@ function initMap() {
         layers: [satelliteLayer]
     });
 
-    fetch('hot_area.json').then(function (response) {
+    fetch('/static/geodata/hot_area.json').then(function (response) {
         return response.json();
     }).then(function (data) {
         const areaQuenteLayer = L.geoJSON(data);
