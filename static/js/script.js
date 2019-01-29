@@ -58,7 +58,7 @@ function drawVector(pointA, pointB) {
 async function calculate() {
     const srcPoint = new L.LatLng(app.lat, app.lng);
 
-    const result = await fetch('/calculate', {
+    const result = await fetch('/api/calculate', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
