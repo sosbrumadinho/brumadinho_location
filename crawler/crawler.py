@@ -26,8 +26,14 @@ if __name__ == "__main__":
     dt, pessoas = parse_html(html)
     dt = dt.strftime('%d/%m/%Y - %H:%M')
 	
-    with open('data.csv', 'w') as f:
-        csv_writer = csv.writer(f)
-
-	for pessoa in pessoas:
-            csv_writer.writerow((pessoa.encode('utf-8'), dt))
+    with open('data.csv', 'rb') as csvfile:
+        spamreader = csv.reader(csvfile)
+        with open('data_compare.csv', 'w') as f:
+            csv_writer = csv.writer(f)
+            csv_writer.writerow(('Nome', 'Última Atualização', 'Status'))
+            for row in spamreader:
+                t = 'Encontrado'
+                for pessoa in pessoas:
+                    if row[0] == pessoa.encode('utf-8'):
+                        t = ' - '
+                csv_writer.writerow((row[0], dt, t))
