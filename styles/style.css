@@ -13,8 +13,6 @@
     bottom: 10px;
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid #CCC;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     z-index: 1000;
     padding: 4px 8px;
