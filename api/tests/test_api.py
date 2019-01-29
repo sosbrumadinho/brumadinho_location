@@ -1,9 +1,7 @@
-from django.contrib.auth.models import User
-from rest_framework.test import APIClient
-from rest_framework import status
-from django.urls import reverse
-
 from django.test import TestCase
+from django.urls import reverse
+from rest_framework import status
+from rest_framework.test import APIClient
 
 
 class ApiViewTestCase(TestCase):
@@ -17,7 +15,8 @@ class ApiViewTestCase(TestCase):
         self.position_data = {'lat': -20.135896, 'lng': -44.123509}
         self.expected_result = {'lat': -20.152766, 'lng': -44.127033}
         self.response = self.client.post(
-            reverse('api:coordinate_calculate'), self.position_data,
+            reverse('api:coordinate_calculate'),
+            self.position_data,
             format="json")
 
     def test_api_can_return_response(self):
@@ -34,5 +33,4 @@ class ApiViewTestCase(TestCase):
     def test_api_return_expected_values(self):
         """Test the api can return expected json data."""
 
-        self.assertEquals(self.response.data,
-                          self.expected_result)
+        self.assertEquals(self.response.data, self.expected_result)

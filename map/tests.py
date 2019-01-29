@@ -12,4 +12,3 @@ class TestFrontEnd(TestCase):
 
     def test_template_used(self):
         self.assertTemplateUsed('index.html')
-
