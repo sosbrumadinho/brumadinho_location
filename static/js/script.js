@@ -90,10 +90,10 @@ function initMap() {
 
     map.on("click", function(e){
         if(marker != null) marker.remove();
-        document.getElementById("lat").value = e.latlng.lat;
-        document.getElementById("lng").value = e.latlng.lng;
+        app.lat = e.latlng.lat;
+        app.lng = e.latlng.lng;
         var point = new L.LatLng(e.latlng.lat, e.latlng.lng);
-        marker = createMarker('local selecionado', point);
+        marker = createMarker('Localização selecionada', point);
     });
 
     fetch('/static/geodata/hot_area.json').then(function (response) {
