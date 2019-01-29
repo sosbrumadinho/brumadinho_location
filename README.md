@@ -41,6 +41,9 @@ System where local/officers can provide geolocation informations about areas whe
 ### - Report info
 App to report missing people and missing animals.
 
+### - Missing people list
+This tool returns an updated .csv with all the names of missing people.
+
 ## Português
 
 Pretendemos que esse projeto seja um repositório de ferramentas para ajudar no resgate e localização das vítimas atingidas pelo rompimento da barragem que ocorreu recentemente em Brumadinho/MG, onde muitas pessoas morreram e muitas outras ainda estão desaparecidas. 
@@ -83,3 +86,5 @@ Nesta ferramenta locais e equipes de resgatem podem fornecer informações de ge
 App para relatar informações de pessoas e animais desaparecidos
 
 
+### - Missing people list
+Essa ferramenta retorna um arquivo .csv atualizado com todos os nomes das pessoas desaparecidas.
