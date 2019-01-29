@@ -2,8 +2,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from api.serializers import CoordinateSerializer
-from api.utils import Position
+from apps.api.serializers import CoordinateSerializer
+from apps.api.utils import Position
 from django.conf import settings
 import re
 import csv
