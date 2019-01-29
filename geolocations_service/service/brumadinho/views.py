@@ -1,4 +1,3 @@
-from django.shortcuts import render
 # from django.contrib.auth.models import Group
 from brumadinho.models import Geolocation, VisitedLocation
 from rest_framework import viewsets

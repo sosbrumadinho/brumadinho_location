@@ -1,5 +1,4 @@
 from brumadinho.views import GeolocationViewSet, VisitedLocationViewSet
-from rest_framework import renderers
 from django.urls import path
 from rest_framework.urlpatterns import format_suffix_patterns
 
@@ -30,7 +29,6 @@ visited_location_detail = VisitedLocationViewSet.as_view({
 
 
 urlpatterns = format_suffix_patterns([
-    path('', api_root),
     path('geolocations/', geolocation_list, name="geolocation-list"),
     path('visited_locations/', visited_location_list, name="visited_location-list"),
 ])
