@@ -28,17 +28,6 @@ class Position:
 
     def calc_vector(self):
         v_pos_x, v_pos_y = (self.lat - dam[0], self.lng - dam[1])
-        d = np.sqrt((v_pos_x ** 2 + v_pos_y ** 2))
         xf = float('%.6f' % (self.lat + v_pos_x))
         yf = float('%.6f' % (self.lng + v_pos_y))
         return {'lat': xf, 'lng': yf}
-
-
-def height(x, y):
-    return 100
-
-
-def return_vector(request_latitude, request_longitude):
-    if request_latitude and request_longitude:
-        return Position(request_latitude, request_longitude).calc_vector()
-    return None
