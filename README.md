@@ -38,6 +38,9 @@ We ask the Devs to make their Pull Requests so we can make this algorithm more r
 ### - Where we had searched
 System where local/officers can provide geolocation informations about areas where that have already been searched </br> 
 
+### - Report info
+App to report missing people and missing animals.
+
 ## Português
 
 Pretendemos que esse projeto seja um repositório de ferramentas para ajudar no resgate e localização das vítimas atingidas pelo rompimento da barragem que ocorreu recentemente em Brumadinho/MG, onde muitas pessoas morreram e muitas outras ainda estão desaparecidas. 
@@ -75,4 +78,8 @@ Pedimos aos Devs que façam seus Pull Requests para que possamos deixar este alg
 
 ### - Onde já foi buscado
 Nesta ferramenta locais e equipes de resgatem podem fornecer informações de geolocalização sobre as áreas onde as buscas já foram realizadas.
+
+### - Report info
+App para relatar informações de pessoas e animais desaparecidos
+
 
