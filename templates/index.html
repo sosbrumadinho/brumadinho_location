@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt">
     <head>
         <title>Brumadinho Location</title>
@@ -11,7 +12,7 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin>
 
         <!-- Include styles for better code reading -->
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="{% static 'styles/style.css' %}">
     </head>
     <body>
         <div id="app">
@@ -85,6 +86,6 @@
         <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin></script>
         <script src='https://bbecquet.github.io/Leaflet.PolylineDecorator/dist/leaflet.polylineDecorator.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.min.js" integrity="sha256-628YJ33SSNGwa+a/S3mx27+nZrFkawJZt/CC/REfBPk=" crossorigin="anonymous"></script>
-        <script src="scriptFiles/script.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>
