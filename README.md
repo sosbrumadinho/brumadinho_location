@@ -8,7 +8,7 @@ The aim of this project is to setup a repository of tools to support the search 
 * If you can help with any issue, please add a comment to the issue to indicate that that you will work on it. 
 * If you are the first to work on any given project, you can choose the language or technology that you are more familiar with.
 * If other volunteers are already helping with the project then please contact them to discuss what still needs to be implemented.
-* Once your change is complete please submit your Pull Request.
+* Once your change is complete please submit your Pull Request tagging the associated issue.
 * If you would like to suggest other tools for development then please create an issue and tag it with the #suggestion label.
 
 You can fork the project at will. We will continue to improve the code throughout the week.
@@ -52,7 +52,7 @@ Pretendemos que esse projeto seja um repositório de ferramentas para ajudar no 
 * Se você puder ajudar com alguma issue, escreva um comentário dizendo que você irá trabalhar nela.
 * Se você for o primeiro a trabalhar no projeto, você pode escolher a linguagem ou tecnologia que se sinta mais confortável.
 * Se mais voluntários estiver ajudando, contate-os antes para saber o que ainda precisa ser implementado.
-* Quando acabar, façam seu Pull Request.
+* Quando acabar, façam seu Pull Request informando a issue associada.
 * Se tiver sugestão de alguma outra ferramenta, cadastre uma issue usando o label #suggestion
 
 "Forkem" à vontade. Continuaremos melhorando o código ao longo da semana. <br/><br/>
