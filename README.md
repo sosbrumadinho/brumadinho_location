@@ -30,6 +30,12 @@ We ask that those contributing to the project submit their Pull Requests as soon
 *  https://pt.wikipedia.org/wiki/Equa%C3%A7%C3%B5es_de_Navier-Stokes
 *  http://rlguy.com/gridfluidsim/
   
+###Support material
+    Using Python to Solve the Navier-Stokes Equations
+    http://www.journalrepository.org/media/journals/JSRR_22/2015/May/Liu732015JSRR17346.pdf
+
+
+
 ### - Where we had searched
 This tool provides information regarding  areas that have already been inspected by the search and rescue teams. 
 
@@ -75,8 +81,8 @@ Pedimos aos Devs que façam seus Pull Requests para que possamos deixar este alg
 
 
 ### Materiais de apoio: 
-Using Python to Solve the Navier-Stokes Equations
-http://www.journalrepository.org/media/journals/JSRR_22/2015/May/Liu732015JSRR17346.pdf
+    Using Python to Solve the Navier-Stokes Equations
+    http://www.journalrepository.org/media/journals/JSRR_22/2015/May/Liu732015JSRR17346.pdf
 
 
 
