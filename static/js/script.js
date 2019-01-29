@@ -58,7 +58,7 @@ function drawVector(pointA, pointB) {
 async function calculate() {
     const srcPoint = new L.LatLng(app.lat, app.lng);
 
-    const result = await fetch('/calculate', {
+    const result = await fetch('/api/calculate', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -86,7 +86,7 @@ function initMap() {
         layers: [satelliteLayer]
     });
 
-    fetch('hot_area.json').then(function (response) {
+    fetch('/static/geodata/hot_area.json').then(function (response) {
         return response.json();
     }).then(function (data) {
         const areaQuenteLayer = L.geoJSON(data);
