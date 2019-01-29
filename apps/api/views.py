@@ -4,6 +4,13 @@ from rest_framework.views import APIView
 
 from api.serializers import CoordinateSerializer
 from api.utils import Position
+from django.conf import settings
+import re
+import csv
+import os
+import requests
+from datetime import datetime
+from bs4 import BeautifulSoup
 
 
 class CalculateCoordinate(APIView):
