@@ -1,0 +1,3 @@
+-r common.txt
+
+mysqlclient==1.3.13
