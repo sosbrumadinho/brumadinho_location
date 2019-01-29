@@ -75,12 +75,13 @@ function initMap() {
         layers: [satelliteLayer]
     });
 
-    const areaQuenteLayer = omnivore.kml('area_quente.kml').on(
-        'ready', function () {
-            map.fitBounds(areaQuenteLayer.getBounds());
-            areaQuenteLayer.addTo(map);
-        }
-    );
+    fetch('hot_area.json').then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        const areaQuenteLayer = L.geoJSON(data);
+        map.fitBounds(areaQuenteLayer.getBounds());
+        areaQuenteLayer.addTo(map);
+    });
 
     return map
 }
