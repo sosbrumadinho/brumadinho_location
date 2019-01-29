@@ -40,7 +40,7 @@ App to report missing people and missing animals.
 This tool returns an updated .csv with all the names of missing people.
 
 ### - Identify the victim body
-Through a set of photos provided by victims relatives in [this project] (https://github.com/dieegom/brumadinho_location/projects/3) and based on the picture of the body found, identify who is the possible victim.
+Through a set of photos provided by victims relatives in [this project](https://github.com/dieegom/brumadinho_location/projects/3) and based on the picture of the body found, identify who is the possible victim.
 
 ## Português
 Pretendemos que esse projeto seja um repositório de ferramentas para ajudar no resgate e localização das vítimas atingidas pelo rompimento da barragem que ocorreu recentemente em Brumadinho/MG, onde muitas pessoas morreram e muitas outras ainda estão desaparecidas. 
@@ -51,10 +51,10 @@ Pretendemos que esse projeto seja um repositório de ferramentas para ajudar no 
 
 ### Como colaborar
 
-* Acesse [Projetos](https://github.com/dieegom/brumadinho_location/projects) e veja a lista de ferramentas que estamos e suas respectivas issues. Você também pode ver essa lista logo abaixo. 
+* Acesse [Projetos](https://github.com/dieegom/brumadinho_location/projects) e veja a lista de ferramentas que estamos desenvolvendo e suas respectivas issues. Você também pode ver essa lista logo abaixo. 
 * Se você puder ajudar com alguma issue, escreva um comentário dizendo que você irá trabalhar nela.
 * Se você for o primeiro a trabalhar no projeto, você pode escolher a linguagem ou tecnologia que se sinta mais confortável.
-* Se mais voluntários estiver ajudando, contate-os antes para saber o que ainda precisa ser implementado.
+* Se mais voluntários estiverem ajudando, contate-os antes para saber o que ainda precisa ser implementado.
 * Quando acabar, façam seu Pull Request informando a issue associada.
 * Se tiver sugestão de alguma outra ferramenta, cadastre uma issue usando o label #suggestion
 
