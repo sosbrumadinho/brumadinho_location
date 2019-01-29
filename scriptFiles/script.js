@@ -1,8 +1,9 @@
+// WARNING: doesn't sanitize inputs
 function createMarker(name, point) {
     return L.marker(point).bindPopup(
-        "<b>" + name + "</b>" +
-        "<br/>Latitude:" + point.lat +
-        "<br/>Longitude:" + point.lng
+        '<b>' + name + '</b>' +
+        '<br/>Latitude:' + point.lat +
+        '<br/>Longitude:' + point.lng
     ).addTo(map);
 }
 
@@ -39,21 +40,17 @@ function drawVector(pointA, pointB) {
 }
 
 async function calculate() {
-    const srcLat = document.getElementById("lat").value;
-    const srcLng = document.getElementById("lng").value;
+    const srcLat = document.getElementById('lat').value;
+    const srcLng = document.getElementById('lng').value;
     const srcPoint = new L.LatLng(srcLat, srcLng);
-    const jeisao = {"lat": srcLat, "lng": srcLng};
-    const params = new URLSearchParams();
-    params.append('lat', srcLat);
-    params.append('lng', srcLng);
 
     const result = await fetch('/calculate', {
         method: 'POST',
         headers: {
-            'Accept': 'application/json',
+            Accept: 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(jeisao)
+        body: JSON.stringify(srcPoint)
     });
     const data = await result.json();
     const destPoint = new L.LatLng(data.lat, data.lng);
@@ -86,6 +83,6 @@ function initMap() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
     window.map = initMap();
 });
