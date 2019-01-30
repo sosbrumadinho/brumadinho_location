@@ -86,6 +86,16 @@ function initMap() {
         layers: [satelliteLayer]
     });
 
+    var marker = null;
+
+    map.on("click", function(e){
+        if(marker != null) marker.remove();
+        app.lat = e.latlng.lat;
+        app.lng = e.latlng.lng;
+        var point = new L.LatLng(e.latlng.lat, e.latlng.lng);
+        marker = createMarker('Localização selecionada', point);
+    });
+
     fetch('/static/geodata/hot_area.json').then(function (response) {
         return response.json();
     }).then(function (data) {

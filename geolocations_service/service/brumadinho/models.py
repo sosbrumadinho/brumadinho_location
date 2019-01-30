@@ -35,6 +35,16 @@ class VisitedLocation(models.Model):
     encounter_number = models.IntegerField(
         help_text="Number of people found in this location."
     )
+    radius = models.FloatField(
+        help_text="Radial área range of search.",
+        default=1
+    )
+    observations = models.CharField(
+        max_length=2000,
+        help_text="Observations",
+        blank=True,
+        null=True
+    )
 
 
 class FoundPeople(models.Model):
@@ -83,4 +93,3 @@ class FoundPeople(models.Model):
         null=True,
         help_text="Status condition of the found people."
     )
-

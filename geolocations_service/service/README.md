@@ -17,29 +17,24 @@ Atualmente conta com três endpoints:
 
 Clone o repositório para um dretório da sua preferencia
 
-Instale os requerimentos para o servidor funcionar (preferencialmente em um ambiente virtual)
+Instale os requerimentos para o servidor funcionar (preferencialmente em um ambiente virtual).
 
 
 ### Desenvolvimento
-    pip install -r service.requirements.develop.txt
+    pip install -r service.requirements.txt
 
-### Produção
-    pip install -r service.requirements.production.txt
+### Rode as migrations já existentes.
+    
+    python manage.py migrate
 
 
 ## Rodando:
 
 ### Desenvolvimento
 
-
-    make run_dev
-
-Acesse o servidor local em `localhost:5002/api/`
-
-### Produção
-
     make run
 
+Acesse o servidor local em `localhost:5002/api/`
 
 ## HELP NEEDED
 
@@ -68,13 +63,12 @@ Clone repo to a workspace.
 
 Install requeriments (preferably in a virtual environment)
 
-
 ### Development
     pip install -r service.requirements.develop.txt
 
-### Production
-    pip install -r service.requirements.production.txt
+### Migrate the database
 
+    python manage.py migrate
 
 ## Running:
 
@@ -84,15 +78,10 @@ Install requeriments (preferably in a virtual environment)
 
 Acess local server at `localhost:5002/api/`
 
-### Production
-
-    make run
 
 
 ## HELP NEEDED
 
 There are a lot of work to do here yet, all help is needed.
-
-
 
 <hr />

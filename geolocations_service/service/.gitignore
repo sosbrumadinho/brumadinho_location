@@ -1,0 +1,17 @@
+*.egg-info
+*.py[co]
+.tox/
+__pycache__
+MANIFEST
+node_modules
+tests/coverage_html/
+tests/.coverage
+build/
+dist/
+tests/report/
+.idea
+*.ini
+*venv*
+.env
+*.sqlite3
+.vscode
