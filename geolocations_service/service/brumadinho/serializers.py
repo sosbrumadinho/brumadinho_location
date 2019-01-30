@@ -13,4 +13,3 @@ class VisitedLocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = VisitedLocation
         fields = "__all__"
-

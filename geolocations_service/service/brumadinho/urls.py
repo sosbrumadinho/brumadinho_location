@@ -1,6 +1,6 @@
-from brumadinho.views import GeolocationViewSet, VisitedLocationViewSet
-from rest_framework import renderers
 from django.urls import path
+
+from brumadinho.views import GeolocationViewSet, VisitedLocationViewSet, api_root
 from rest_framework.urlpatterns import format_suffix_patterns
 
 
