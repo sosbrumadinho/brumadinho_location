@@ -1,8 +1,5 @@
-# -*- coding: utf-8 -*-
-
 import re
 import csv
-import os
 import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
@@ -23,6 +20,7 @@ class Crawler:
         nomes = [i.text.strip() for i in soup.find_all('li')]
         return (ultima_atualizacao, nomes)
 
+
 if __name__ == "__main__":
     crawler = Crawler()
     html = crawler.get_raw_data()
@@ -39,3 +37,4 @@ if __name__ == "__main__":
                     if row[0] == pessoa.encode('utf-8'):
                         t = ' - '
                 csv_writer.writerow((row[0], dt, t))
+ 

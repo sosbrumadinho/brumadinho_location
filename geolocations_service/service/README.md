@@ -14,10 +14,13 @@ Atualmente conta com dois endpoints:
 Clone o repositório para um dretório da sua preferencia
 
 
-Instale os requerimentos para o servidor funcionar (preferencialmente em um ambiente virtual)
+Instale os requerimentos para o servidor funcionar (preferencialmente em um ambiente virtual).
 
     pip install -r requirements.txt
 
+Rode as migrations já existentes.
+    
+    python manage.py migrate
 
 ## rodando local:
 

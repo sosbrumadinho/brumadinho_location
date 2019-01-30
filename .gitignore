@@ -12,3 +12,5 @@ tests/report/
 .idea
 *.ini
 *venv*
+.env
+*.sqlite3
