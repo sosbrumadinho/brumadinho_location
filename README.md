@@ -23,7 +23,7 @@ This tool calculates the probable location of missing individuals' bodies by tak
 
 The algorithm still needs improvement and to improve it, we will need tailings physical-chemical data, location topographic map (.csv), simulations of the tailing spreading, and, of course, the latitude and longitude coordinates from the victims' cell phones.
 
-The production enviromment is currently live at: http://18.218.138.85
+The production enviromment is currently live at: https://brumadinho.osei.ong.br
 
 We ask that those contributing to the project submit their Pull Requests as soon as possible to help improve the algorithm and make it available to those responsible for the search and rescue operations.
 
@@ -82,7 +82,7 @@ Obrigado.
 Essa ferramenta requer as coordenadas de latitude e longitude dos desaparecidos para calcular a estimativa baseando-se no fluxo de rejeitos <br/>
 O algoritmo precisa ser melhorado (e muito) ainda. Além disso, fizemos apenas com os poucos dados que obtivemos. Ideal seria termos dados físico-químicos do rejeito, mapa topográfico (em .csv) do local, simulações do rejeito se espalhando e, claro, latitude e longitude dos celulares.<br/>
 
-Vamos deixar o sistema atualizado rodando em: http://18.218.138.85  <br/>
+Vamos deixar o sistema atualizado rodando em: https://brumadinho.osei.ong.br  <br/>
 Pedimos aos Devs que façam seus Pull Requests para que possamos deixar este algoritmo mais robusto e disponível para os responsáveis pelo resgate. "Forkem" à vontade. Continuaremos melhorando o código ao longo da semana. <br/><br/>
 
 ####  Ideias a serem implementadas: <br/>
