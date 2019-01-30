@@ -33,6 +33,12 @@ We ask that those contributing to the project submit their Pull Requests as soon
 *  https://pt.wikipedia.org/wiki/Equa%C3%A7%C3%B5es_de_Navier-Stokes
 *  http://rlguy.com/gridfluidsim/
   
+###Support material
+    Using Python to Solve the Navier-Stokes Equations
+    http://www.journalrepository.org/media/journals/JSRR_22/2015/May/Liu732015JSRR17346.pdf
+
+
+
 ### - Where we had searched
 This tool provides information regarding  areas that have already been inspected by the search and rescue teams. 
 
@@ -82,6 +88,14 @@ Pedimos aos Devs que façam seus Pull Requests para que possamos deixar este alg
 *  http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes/ <br/>
 *  https://pt.wikipedia.org/wiki/Equa%C3%A7%C3%B5es_de_Navier-Stokes <br/>
 *  http://rlguy.com/gridfluidsim/<br/><br/>
+
+
+### Materiais de apoio: 
+    Using Python to Solve the Navier-Stokes Equations
+    http://www.journalrepository.org/media/journals/JSRR_22/2015/May/Liu732015JSRR17346.pdf
+
+
+
 
 ### - Onde já foi buscado
 Nesta ferramenta locais e equipes de resgatem podem fornecer informações de geolocalização sobre as áreas onde as buscas já foram realizadas.
