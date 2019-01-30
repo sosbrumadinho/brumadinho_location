@@ -6,5 +6,4 @@ app_name = 'api'
 
 urlpatterns = [
     path('calculate', calculatecoordinate, name='coordinate_calculate'),
-    path('crawler/', crawler),
 ]
