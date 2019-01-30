@@ -1,11 +1,10 @@
 import re
 import csv
 import requests
-from datetime import datetime
 from bs4 import BeautifulSoup
 
-class Crawler:
 
+class Crawler:
     def get_raw_data(self):
         url = "http://brumadinho.vale.com/listagem-pessoas-sem-contato.html"
         r = requests.get(url)
@@ -15,7 +14,7 @@ class Crawler:
     def parse_html(self, html):
         soup = BeautifulSoup(html, 'html.parser')
         text = soup.text
-        ultima_atualizacao = re.search('(?<=atualização em ).+(?=\.)', text).group()
+        ultima_atualizacao = re.search(r'(?<=atualização em ).+(?=\.)', text).group()
         ultima_atualizacao = ultima_atualizacao[:10]
         nomes = [i.text.strip() for i in soup.find_all('li')]
         return (ultima_atualizacao, nomes)
@@ -25,7 +24,7 @@ if __name__ == "__main__":
     crawler = Crawler()
     html = crawler.get_raw_data()
     dt, pessoas = crawler.parse_html(html)
-    
+
     with open('data.csv', encoding='utf-8') as csvfile:
         spamreader = csv.reader(csvfile)
         with open('data_compare.csv', 'w', encoding='utf-8') as f:
@@ -37,4 +36,3 @@ if __name__ == "__main__":
                     if row[0] == pessoa.encode('utf-8'):
                         t = ' - '
                 csv_writer.writerow((row[0], dt, t))
- 
