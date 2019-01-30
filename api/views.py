@@ -1,3 +1,4 @@
+import googlemaps
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -27,5 +28,6 @@ def get_elevation(lat, lng):
     gmaps = googlemaps.Client(key=settings.GMAPS_API_KEY)
     geocode_result = gmaps.elevation((lat, lng))
     return geocode_result[0]['elevation']
+
 
 calculatecoordinate = CalculateCoordinate.as_view()
