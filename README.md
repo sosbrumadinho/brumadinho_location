@@ -1,5 +1,16 @@
 # Brumadinho Location
 
+## Important
+
+* If you're looking for the project to predict victims' location of
+  disasters like Dam Collapse go to the project [Victims Location
+  Prediction](https://github.com/sosbrumadinho/victims_location_prediction)
+
+* If you want to contribute crawling data related with [Brumadinho dam
+  disaster](https://en.wikipedia.org/wiki/Brumadinho_dam_disaster) go to
+  the project [Brumadinho
+  Crawlers](https://github.com/sosbrumadinho/brumadinho_crawlers)
+
 ## English
 The aim of this project is to setup a repository of tools to support the search and rescue efforts, currently taking place at Brumadino/MG/Brazil, in response to the [**Brumadinho dam disaster**](https://en.wikipedia.org/wiki/Brumadinho_dam_disaster) occurred on 25 January 2019. As this file is being updated, 65 people have been confirmed dead and over 300 are still missing.
 
