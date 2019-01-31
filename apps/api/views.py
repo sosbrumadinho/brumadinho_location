@@ -2,9 +2,10 @@ import googlemaps
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.http import HttpResponse
+from apps.api.serializers import CoordinateSerializer
+from apps.api.utils import Position
 
-from api.serializers import CoordinateSerializer
-from api.utils import Position
 
 from django.conf import settings
 
@@ -31,3 +32,4 @@ def get_elevation(lat, lng):
 
 
 calculatecoordinate = CalculateCoordinate.as_view()
+
