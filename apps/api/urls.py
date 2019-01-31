@@ -1,6 +1,6 @@
 from django.urls import path
 
-from apps.api.views import calculatecoordinate, crawler
+from apps.api.views import calculatecoordinate
 
 app_name = 'api'
 
