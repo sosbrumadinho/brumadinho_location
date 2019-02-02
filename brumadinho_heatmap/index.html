@@ -4,6 +4,15 @@
 <head>
     <meta charset='utf-8' />
     <title>Locais Onde Passei</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="./src/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="./src/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
@@ -36,6 +45,25 @@
         #brand-logo {
             margin: auto;
         }
+
+        #info {
+            display: block;
+            position: relative;
+            margin:  auto;
+            padding: 10px;
+            width: 480px;
+            white-space: pre-wrap;
+
+
+            border: none;
+            border-radius: 3px;
+
+            font-size: 12px;
+            text-align: center;
+            color: #000;
+            background:rgb(255,255,255,0.8);
+        }
+
     </style>
 </head>
 
@@ -47,34 +75,10 @@
             <img src="/src/imgs/placeholder.svg" width="30" height="30" alt="">
         </a>
 
-        <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Selecionar Dia
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Todos</a>
-                        <a class="dropdown-item" href="#">04-02-2019</a>
-                        <a class="dropdown-item" href="#">01-02-2019</a>
-                        <a class="dropdown-item" href="#">05-02-2019</a>
-                        <a class="dropdown-item" href="#">04-02-2019</a>
-                        <a class="dropdown-item" href="#">01-02-2019</a>
-                        <a class="dropdown-item" href="#">05-02-2019</a>
-                        <a class="dropdown-item" href="#">04-02-2019</a>
-                        <a class="dropdown-item" href="#">01-02-2019</a>
-                        <a class="dropdown-item" href="#">05-02-2019</a>
-                    </div>
-
-                </li>
-            </ul>
-        </div> -->
-
     </nav>
 
     <div id='map'></div>
+    <pre id='info'></pre>
     <script type='text/javascript' src='./map.js'></script>
 
 </body>
