@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Locais Onde Passei</title>
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/GC0nZFh/placeholder.png">
+    
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!--  -->
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 56px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #brand-logo {
+            margin: auto;
+        }
+
+        #info {
+            display: block;
+            position: relative;
+            margin:  auto;
+            padding: 10px;
+            width: 480px;
+            white-space: pre-wrap;
+
+
+            border: none;
+            border-radius: 3px;
+
+            font-size: 12px;
+            text-align: center;
+            color: #000;
+            background:rgb(255,255,255,0.8);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Just an image -->
+    <nav class="navbar navbar-light navbar-expand" style="background-color: #ffda79;">
+        <a class="navbar-brand" id="brand-logo">
+            <img src="https://i.ibb.co/GC0nZFh/placeholder.png" type='image' width="30" height="30" alt="">
+        </a>
+
+    </nav>
+
+    <div id='map'></div>
+    <pre id='info'></pre>
+    <script type='text/javascript' src='./js/map.js'></script>
+
+</body>
+
+</html>
